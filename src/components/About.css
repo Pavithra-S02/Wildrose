@@ -1,0 +1,318 @@
+.about {
+    padding: 120px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.about-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+}
+
+/* Images */
+
+.about-images {
+    position: relative;
+    min-height: 620px;
+}
+
+.about-main-image {
+    width: 76%;
+    height: 560px;
+
+    overflow: hidden;
+
+    border-radius: 180px 180px 20px 20px;
+
+    background: #ead9d9;
+}
+
+.about-main-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.8s ease;
+}
+
+.about-main-image:hover img {
+    transform: scale(1.04);
+}
+
+.about-small-image {
+    position: absolute;
+
+    right: 0;
+    bottom: 10px;
+
+    width: 42%;
+    height: 260px;
+
+    overflow: hidden;
+
+    border: 8px solid #ffffff;
+    border-radius: 20px;
+
+    background: #ead9d9;
+}
+
+.about-small-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* Badge */
+
+.about-badge {
+    position: absolute;
+
+    left: -25px;
+    bottom: 90px;
+
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border-radius: 50%;
+
+    background: #5a2333;
+    color: #ffffff;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(90, 35, 51, 0.2);
+}
+
+.about-badge svg {
+    color: #e8c5ca;
+}
+
+.about-badge span {
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+}
+
+/* Content */
+
+.about-content {
+    max-width: 540px;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    color: #a85c6a;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-label span {
+    width: 35px;
+    height: 1px;
+
+    background: #a85c6a;
+}
+
+.about-content h2 {
+    margin: 0;
+
+    color: #21191b;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(42px, 4.5vw, 64px);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+}
+
+.about-content h2 em {
+    display: block;
+
+    color: #a85c6a;
+
+    font-weight: 400;
+}
+
+.about-intro {
+    margin: 30px 0 18px;
+
+    color: #5a2333;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+}
+
+.about-text {
+    margin: 0;
+
+    color: #796a6e;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+/* Stats */
+
+.about-stats {
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 40px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #eadfdb;
+}
+
+.about-stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.about-stat strong {
+    color: #5a2333;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+}
+
+.about-stat span {
+    color: #817276;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+/* Link */
+
+.about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 40px;
+
+    color: #5a2333;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-bottom: 1px solid #5a2333;
+
+    padding-bottom: 7px;
+
+    transition: all 0.3s ease;
+}
+
+.about-link:hover {
+    gap: 15px;
+    color: #a85c6a;
+}
+
+/* Tablet */
+
+@media (max-width: 950px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .about-content {
+        max-width: 700px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .about {
+        padding: 80px 0;
+    }
+
+    .about-images {
+        min-height: 500px;
+    }
+
+    .about-main-image {
+        width: 82%;
+        height: 450px;
+    }
+
+    .about-small-image {
+        width: 45%;
+        height: 200px;
+    }
+
+    .about-badge {
+        left: -5px;
+        bottom: 55px;
+
+        width: 95px;
+        height: 95px;
+    }
+
+    .about-content h2 {
+        font-size: 43px;
+    }
+
+    .about-intro {
+        font-size: 18px;
+    }
+
+    .about-stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .about-stat strong {
+        font-size: 25px;
+    }
+}

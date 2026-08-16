@@ -1,0 +1,167 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 0;
+    background: rgba(248, 243, 239, 0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(90, 35, 51, 0.08);
+}
+
+.navbar-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color:  #ac3d5e;
+}
+
+.logo-icon {
+    font-size: 25px;
+}
+
+.logo-text {
+    font-family: "Georgia", serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #21191b;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1.5px;
+    background: #a85c6a;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a85c6a;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Right side */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.heart-btn,
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color:  #ac3d5e;
+}
+
+.heart-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.heart-btn:hover {
+    background: #ead9d9;
+}
+
+.book-btn {
+    text-decoration: none;
+    background: #ac3d5e;
+    color: white;
+    padding: 12px 21px;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.book-btn:hover {
+    background: #bd6877;
+    transform: translateY(-2px);
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .heart-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .book-btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .logo-text {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .logo-icon {
+        font-size: 20px;
+    }
+
+    .book-btn {
+        display: none;
+    }
+}
